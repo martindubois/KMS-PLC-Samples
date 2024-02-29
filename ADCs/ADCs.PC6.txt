@@ -1,0 +1,33 @@
+
+# Author    KMS - Martin Dubois, P. Eng.
+# Copyright (C) 2024 KMS
+# License   http://www.apache.org/licenses/LICENSE-2.0
+# Product   KMS-PLC-Samples
+# File      ADCs/ADCs.PC6.txt
+
+CONSTANT pADCs_Values_mV 100
+
+OUTPUT oLED 0
+
+WORD wADCs_Value0_mV 100
+WORD wADCs_Value1_mV 101
+WORD wADCs_Value2_mV 102
+WORD wADCs_Value3_mV 103
+WORD wADCs_Value4_mV 104
+WORD wADCs_Value5_mV 105
+WORD wADCs_Value6_mV 106
+WORD wADCs_Value7_mV 107
+
+FUNCTION ADCs_Read
+
+    for i = 1 to 8
+        DM[ pADCs_Values_mV - 1 + i ] = ADC( i )
+    next
+
+    if testio( oLED )
+        clrio oLED
+    else
+        setio oLED
+    endif
+
+FUNCTION END
