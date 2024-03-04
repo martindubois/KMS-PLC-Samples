@@ -1,0 +1,45 @@
+øõTRiLOGI Ver 5.0
+~
+0,oLED
+~
+~
+~
+~
+%LADCs_Read=Clk:0.1s
+
+~END_CIRCUIT~
+È
+Fn#0,204
+// Function ADCs_Read
+// Imported using KMS-PLC
+    for i = 1 to 8
+        DM[ pADCs_Values_mV - 1 + i ] = ADC( i )
+    next
+    if testio( oLED )
+        clrio oLED
+    else
+        setio oLED
+    endif
+
+~END_CUSTFN~
+0,ADCs_Read
+~END_CUSTFNLABEL~
+0,0,
+1,0,
+2,0,
+3,0,
+4,0,
+~END_QUICKTAGS~
+0,pADCs_Values_mV,100
+1,wADCs_Value0_mV,DM[100]
+2,wADCs_Value1_mV,DM[101]
+3,wADCs_Value2_mV,DM[102]
+4,wADCs_Value3_mV,DM[103]
+5,wADCs_Value4_mV,DM[104]
+6,wADCs_Value5_mV,DM[105]
+7,wADCs_Value6_mV,DM[106]
+8,wADCs_Value7_mV,DM[107]
+~END_DEFINES~
+~END_BREAKPOINTS~
+192.168.0.28:9080
+~END_LASTIPADDR~
