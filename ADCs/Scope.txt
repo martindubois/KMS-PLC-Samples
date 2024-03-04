@@ -1,0 +1,39 @@
+
+# Author    KMS - Martin Dubois, P. Eng.
+# Copyright (C) 2024 KMS
+# License   http://www.apache.org/licenses/LICENSE-2.0
+# Product   KMS-PLC-Samples
+# File      ADCs/Scope.txt
+
+Scope Select Default
+Scope Frequency 10
+Scope Mode CONTINUOUS_SCROLLING
+Scope ScaleX 100
+Scope Channel InputRegister 1099
+Scope Channel ScaleY 0.01
+Scope Channel Y 20
+Scope Channel InputRegister 1100
+Scope Channel ScaleY 0.01
+Scope Channel Y 80
+Scope Channel InputRegister 1101
+Scope Channel ScaleY 0.01
+Scope Channel Y 140
+Scope Channel InputRegister 1102
+Scope Channel ScaleY 0.01
+Scope Channel Y 200
+Scope Channel InputRegister 1103
+Scope Channel ScaleY 0.01
+Scope Channel Y 260
+Scope Channel InputRegister 1104
+Scope Channel ScaleY 0.01
+Scope Channel Y 320
+Scope Channel InputRegister 1105
+Scope Channel ScaleY 0.01
+Scope Channel Y 380
+Scope Channel InputRegister 1106
+Scope Channel ScaleY 0.01
+Scope Channel Y 440
+Scope Show
+Scope Start
+
+Shell
